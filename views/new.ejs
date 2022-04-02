@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewtonTV | <%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/new.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <h1 id="logo">
+        Newton
+        <span>TV</span>
+      </h1>
+      <a href="/" class="button">Cancelar</a>
+    </header>
+    <section class="container">
+      <img src="../<%= doc.imagem %>" id="poster" />
+      <form action="<%= action %>" method="POST">
+        <div class="formItem">
+          <label for="titulo">Título</label>
+          <input
+            type="text"
+            name="titulo"
+            id="titulo"
+            value="<%= doc.titulo %>"
+          />
+        </div>
+        <div class="formItem">
+          <label for="sinopse">Sinopse</label>
+          <textarea name="sinopse" id="sinopse" cols="30" rows="10">
+<%= doc.sinopse %></textarea
+          >
+        </div>
+        <div class="formItem">
+          <label for="duracao">Duração</label>
+          <input
+            type="number"
+            name="duracao"
+            id="duracao"
+            value="<%= doc.duracao %>"
+          />
+        </div>
+        <div class="formItem">
+          <label for="dataLancamento">Data Lançamento</label>
+          <input
+            type="text"
+            name="dataLancamento"
+            id="dataLancamento"
+            value="<%= doc.dataLancamento %>"
+          />
+        </div>
+        <div class="formItem">
+          <label for="imagem">Diretório Imagem (Poster)</label>
+          <input
+            type="text"
+            name="imagem"
+            id="imagem"
+            value="<%= doc.imagem %>"
+          />
+        </div>
+        <div class="formItem">
+          <label for="fundo">Diretório Imagem (Background)</label>
+          <input type="text" name="fundo" id="fundo" value="<%= doc.fundo %>" />
+        </div>
+        <div class="formItem">
+          <label for="categorias">Categorias</label>
+          <input
+            type="text"
+            name="categorias"
+            id="categorias"
+            value="<%= doc.categorias %>"
+          />
+        </div>
+        <div class="options">
+          <input type="submit" value="Salvar" class="button save" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
